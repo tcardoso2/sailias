@@ -24,7 +24,8 @@ Cloud.setup({
   	"sendPasswordRecoveryEmail":{"verb":"POST","url":"/api/v1/entrance/send-password-recovery-email","args":["emailAddress"]},
   	"updatePasswordAndLogin":{"verb":"POST","url":"/api/v1/entrance/update-password-and-login","args":["password","token"]},
   	"deliverContactFormMessage":{"verb":"POST","url":"/api/v1/deliver-contact-form-message","args":["emailAddress","topic","fullName","message"]},
-  	"deleteUser":{"verb":"POST","url":"/api/v1/delete-user","args":["id"]}
+  	"deleteUser":{"verb":"POST","url":"/api/v1/delete-user","args":["id"]},
+    "addUser":{"verb":"POST","url":"/api/v1/add-user","args":["emailAddress","password","fullName"]}
   }
   /* eslint-enable */
 

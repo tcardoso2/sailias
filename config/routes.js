@@ -42,6 +42,7 @@ module.exports.routes = {
 
   'GET /users':              { action: 'view-users' },
   'GET /remove-user/:id':    { action: 'view-remove-user' },
+  'GET /add-user':           { action: 'view-add-user' },
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗
@@ -74,5 +75,6 @@ module.exports.routes = {
   //  ║  ║ ║╚═╗ ║ ║ ║║║║
   //  ╚═╝╚═╝╚═╝ ╩ ╚═╝╩ ╩
   'POST  /api/v1/delete-user':                            { action: 'delete-user' },
+  'POST  /api/v1/add-user':                               { action: 'add-user' }
 
 };
