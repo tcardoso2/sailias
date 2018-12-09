@@ -19,7 +19,7 @@
 	        </span>
 	      </div>
 	    </div>
-	    <div class="row">
+	    <div class="row" v-if="me.isSuperAdmin">
 	      <div class="col-3">Is Super Admin:</div>
 	      <div class="col" v-if="item.id == me.id"><strong>{{item.isSuperAdmin}}</strong></div>
 	    </div>

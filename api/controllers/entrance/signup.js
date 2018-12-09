@@ -44,7 +44,6 @@ the account verification message.)`,
 
   },
 
-
   exits: {
 
     success: {
@@ -70,17 +69,21 @@ the account verification message.)`,
 
     var newEmailAddress = inputs.emailAddress.toLowerCase();
 
+    //If the user is the first signing up, then automatically becomes the Super Admin
+    var numRecords = await User.count();
+
     // Build up data for the new user record and save it to the database.
     // (Also use `fetch` to retrieve the new ID so that we can use it below.)
     var newUserRecord = await User.create(_.extend({
       emailAddress: newEmailAddress,
       password: await sails.helpers.passwords.hashPassword(inputs.password),
       fullName: inputs.fullName,
-      tosAcceptedByIp: this.req.ip
+      tosAcceptedByIp: this.req.ip,
+      isSuperAdmin: numRecords == 0,
     }, sails.config.custom.verifyEmailAddresses? {
       emailProofToken: await sails.helpers.strings.random('url-friendly'),
       emailProofTokenExpiresAt: Date.now() + sails.config.custom.emailProofTokenTTL,
-      emailStatus: 'unconfirmed'
+      emailStatus: 'unconfirmed',
     }:{}))
     .intercept('E_UNIQUE', 'emailAlreadyInUse')
     .intercept({name: 'UsageError'}, 'invalid')
