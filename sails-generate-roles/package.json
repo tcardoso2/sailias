@@ -1,0 +1,32 @@
+{
+  "name": "@tcardoso2/sails-generate-roles",
+  "version": "0.1.0",
+  "description": "sails generate roles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'No further automated tests have been implemented for this generator yet.'",
+    "pretest": "npm run lint",
+    "lint": "node ./node_modules/eslint/bin/eslint . --max-warnings=0"
+  },
+  "keywords": [
+    "roles",
+    "generator",
+    "sails",
+    "generate",
+    "plugin"
+  ],
+  "author": "tcardoso2",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "3.10.1"
+  },
+  "devDependencies": {
+    "eslint": "3.19.0"
+  },
+  "repository": {"type":"git","url":"git://github.com/tcardoso2/sails-generate-roles.git"},
+  "sailsGenerator": {
+    "type": "roles",
+    "behavior": "Implements or overrides `sails generate roles`",
+    "sailsVersion": "^1.0.0"
+  }
+}

@@ -1,6 +1,8 @@
 {
   "generators": {
-    "modules": {}
+  "modules": {
+      "roles": "./sails-generate-roles"
+    }
   },
   "_generatedWith": {
     "sails": "1.1.0",
