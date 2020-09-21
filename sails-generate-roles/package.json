@@ -21,7 +21,7 @@
     "lodash": "3.10.1"
   },
   "devDependencies": {
-    "eslint": "3.19.0"
+    "eslint": "7.9.0"
   },
   "repository": {"type":"git","url":"git://github.com/tcardoso2/sails-generate-roles.git"},
   "sailsGenerator": {
